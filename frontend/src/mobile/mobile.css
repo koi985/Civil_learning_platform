@@ -1,0 +1,259 @@
+:root {
+  --mobile-bg: #f5f7fb;
+  --mobile-text: #172033;
+  --mobile-muted: #69758a;
+  --mobile-primary: #2563eb;
+  --mobile-teal: #0f766e;
+  --mobile-orange: #f97316;
+  --mobile-border: #e3e8f2;
+  --mobile-card: #ffffff;
+}
+
+body.mobile-route {
+  min-width: 0;
+  overflow-x: hidden;
+  background: var(--mobile-bg);
+}
+
+body.mobile-route #app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.mobile-shell {
+  min-height: 100vh;
+  background: var(--mobile-bg);
+  color: var(--mobile-text);
+}
+
+.mobile-shell :where(button, a, input, textarea, select) {
+  font: inherit;
+}
+
+.mobile-scroll {
+  min-height: calc(100vh - 96px);
+  padding: 12px 12px 76px;
+  box-sizing: border-box;
+}
+
+.mobile-page {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.mobile-hero {
+  display: grid;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb 0%, #0f766e 100%);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.16);
+}
+
+.mobile-hero.is-admin {
+  background: linear-gradient(135deg, #1e40af 0%, #f97316 100%);
+}
+
+.mobile-hero.is-teacher {
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+}
+
+.mobile-hero h1,
+.mobile-hero p,
+.mobile-section h2,
+.mobile-card h3,
+.mobile-card p {
+  margin: 0;
+}
+
+.mobile-hero h1 {
+  font-size: 24px;
+  line-height: 1.24;
+  font-weight: 800;
+}
+
+.mobile-hero p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.mobile-section {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 36px;
+}
+
+.mobile-section h2 {
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.mobile-muted {
+  color: var(--mobile-muted);
+}
+
+.mobile-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mobile-stat {
+  min-width: 0;
+  border: 1px solid var(--mobile-border);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--mobile-card);
+}
+
+.mobile-stat span {
+  display: block;
+  color: var(--mobile-muted);
+  font-size: 12px;
+}
+
+.mobile-stat strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--mobile-primary);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.mobile-card {
+  min-width: 0;
+  border: 1px solid var(--mobile-border);
+  border-radius: 8px;
+  padding: 12px;
+  background: var(--mobile-card);
+}
+
+.mobile-card h3 {
+  color: var(--mobile-text);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.mobile-card p {
+  margin-top: 6px;
+  color: var(--mobile-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mobile-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.mobile-pill {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  border-radius: 6px;
+  padding: 0 8px;
+  background: #eef4ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mobile-pill.is-warn {
+  background: #fff5e8;
+  color: #c2410c;
+}
+
+.mobile-pill.is-ok {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.mobile-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.mobile-actions.is-single {
+  grid-template-columns: 1fr;
+}
+
+.mobile-list {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-cover-row {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.mobile-cover {
+  width: 96px;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #dbeafe;
+}
+
+.mobile-empty {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 24px 12px;
+  background: #fff;
+  color: var(--mobile-muted);
+  text-align: center;
+}
+
+.mobile-filter-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.mobile-filter-row .van-button {
+  flex: 0 0 auto;
+}
+
+.mobile-tabbar-placeholder {
+  height: 50px;
+}
+
+@media (max-width: 360px) {
+  .mobile-scroll {
+    padding-inline: 10px;
+  }
+
+  .mobile-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-cover-row {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-cover {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}

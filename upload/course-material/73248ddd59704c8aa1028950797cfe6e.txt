@@ -1,0 +1,10 @@
+    
+ redis-server --service-install redis.windows.conf //安装服务
+    redis-server --service-start //启动服务
+    redis-server --service-stop //停止服务
+    redis-server --service-uninstall //卸载服务
+
+netstat -ano | findstr :
+# 示例
+taskkill /PID 1234 /F
+

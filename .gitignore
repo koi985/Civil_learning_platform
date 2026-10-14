@@ -1,0 +1,52 @@
+# Logs and runtime output
+*.log
+*.out
+*.err
+
+# Java / Maven build output
+backend/target/
+target/
+
+# Node / Vite build output
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# Upload temporary files
+.upload-tmp/
+upload/tmp/
+frontend/.upload-tmp/
+backend/.upload-tmp/
+
+# Local tool caches and test artifacts
+.claude/
+.playwright-cli/
+scripts/
+pictures/
+test-results/
+tmp/
+output/
+
+# Root-level documents and generated analysis notes not needed to run the app
+/*.docx
+/*.pdf
+/CONSTRAINTS.md
+/civil-platform-gap-analysis-*.md
+/recommend-system-audit-*.md
+/thesis-issue-and-optimization-*.md
+/毕业论文约束.md
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets — only the placeholder example is tracked
+backend/src/main/resources/application.yml
+
+# Oversized upload media (>100MB per-file GitHub limit)
+upload/classroom-material/93a9515fe5294983b301786a26a4c673.mp4
+upload/classroom-material/f6cdd54aaeea4729bb0b386769180017.mp4
+upload/classroom-material/329a020529a148dc90efb917fb551497.mp4

@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: civil-learning-backend
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/civil_learning?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: <YOUR_DB_PASSWORD>
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      location: upload/tmp
+      max-file-size: 500MB
+      max-request-size: 500MB
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 2000ms
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+app:
+  jwt:
+    secret: <YOUR_JWT_SECRET>
+    expire-seconds: 86400
+  file:
+    base-path: upload
+    public-prefix: /api/files/view/
+  ai-assistant:
+    api-url: https://api.coze.cn/v3/chat
+    bot-id: <YOUR_AI_BOT_ID>
+    api-key: <YOUR_API_KEY>
+  essay-grader:
+    api-url: https://api.coze.cn/v3/chat
+    bot-id: <YOUR_ESSAY_BOT_ID>
+    api-key: <YOUR_API_KEY>

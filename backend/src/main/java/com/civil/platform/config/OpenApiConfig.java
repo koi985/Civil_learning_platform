@@ -1,0 +1,18 @@
+package com.civil.platform.config;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfig {
+
+    @Bean
+    public OpenAPI openAPI() {
+        return new OpenAPI().info(new Info()
+                .title("公考学习平台 API")
+                .version("1.0.0")
+                .description("阶段一可联调后端接口"));
+    }
+}
